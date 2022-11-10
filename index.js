@@ -22,9 +22,9 @@ app.get('/', (req, res) => {
 })
 
 // Use gateway
-app.use('/', createProxyMiddleware(collabOptions))
 app.use('/api/v1/auth', createProxyMiddleware(authOptions))
 app.use('/api/v1/user', createProxyMiddleware(userOptions))
+app.use('/', createProxyMiddleware(collabOptions))
 
 // Start server
 app.listen(port, () => {
