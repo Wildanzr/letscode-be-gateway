@@ -5,7 +5,7 @@ const morgan = require('morgan')
 const cors = require('cors')
 
 // Import options
-const { authOptions, userOptions } = require('./src')
+const { authOptions, userOptions, collabOptions } = require('./src')
 
 const app = express()
 const port = process.env.PORT || 5000
@@ -22,6 +22,7 @@ app.get('/', (req, res) => {
 })
 
 // Use gateway
+app.use('/', createProxyMiddleware(collabOptions))
 app.use('/api/v1/auth', createProxyMiddleware(authOptions))
 app.use('/api/v1/user', createProxyMiddleware(userOptions))
 
