@@ -1,5 +1,6 @@
 module.exports = {
   ...require('./authRoutes'),
   ...require('./userRoutes'),
-  ...require('./collabRoutes')
+  ...require('./collabRoutes'),
+  ...require('./problemRoutes')
 }
