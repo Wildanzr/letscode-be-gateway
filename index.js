@@ -26,6 +26,7 @@ app.use('/api/v1/auth', createProxyMiddleware(authOptions))
 app.use('/api/v1/user', createProxyMiddleware(authOptions))
 app.use('/api/v1/problems', createProxyMiddleware(problemOptions))
 app.use('/api/v1/competes', createProxyMiddleware(problemOptions))
+app.use('/api/v1/compete-problems', createProxyMiddleware(problemOptions))
 app.use('/', createProxyMiddleware(collabOptions))
 
 // Start server
