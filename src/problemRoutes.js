@@ -1,5 +1,8 @@
+const PROBLEM = process.env.PROBLEM_URL
+
+console.log('PROBLEM_URL: ', PROBLEM)
 const problemOptions = {
-  target: 'http://localhost:5003', // target host
+  target: PROBLEM, // target host
   changeOrigin: true // needed for virtual hosted sites
 }
 

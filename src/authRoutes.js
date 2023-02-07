@@ -1,5 +1,9 @@
+const AUTH = process.env.AUTH_URL
+
+console.log('AUTH_URL: ', AUTH)
+
 const authOptions = {
-  target: 'http://localhost:5001', // target host
+  target: AUTH, // target host
   changeOrigin: true // needed for virtual hosted sites
 }
 

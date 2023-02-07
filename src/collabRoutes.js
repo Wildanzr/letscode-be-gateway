@@ -1,5 +1,8 @@
+const COLLABORATION = process.env.COLLABORATION_URL
+
+console.log('COLLABORATION_URL: ', COLLABORATION)
 const collabOptions = {
-  target: 'http://localhost:5002', // target host
+  target: COLLABORATION, // target host
   changeOrigin: true, // needed for virtual hosted sites,
   ws: true
 }

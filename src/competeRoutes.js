@@ -1,5 +1,9 @@
+const PROBLEM = process.env.PROBLEM_URL
+
+console.log('COMPETE_URL: ', PROBLEM)
+
 const competeOptions = {
-  target: 'http://localhost:5003', // target host
+  target: PROBLEM, // target host
   changeOrigin: true // needed for virtual hosted sites
 }
 
