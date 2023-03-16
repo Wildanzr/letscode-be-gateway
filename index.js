@@ -22,6 +22,7 @@ app.get('/', (req, res) => {
 })
 
 // Use gateway
+app.use('/storage', createProxyMiddleware(authOptions))
 app.use('/api/v1/auth', createProxyMiddleware(authOptions))
 app.use('/api/v1/user', createProxyMiddleware(authOptions))
 app.use('/api/v1/problems', createProxyMiddleware(problemOptions))
