@@ -1,6 +1,7 @@
-const PROBLEM = process.env.PROBLEM_URL
+const { logger } = require('./logger')
+const PROBLEM = process.env.PROBLEM_URL || 'http://localhost:5003'
 
-console.log('COMPETE_URL: ', PROBLEM)
+logger.info(`PROBLEM_URL: ${PROBLEM}`)
 
 const competeOptions = {
   target: PROBLEM, // target host

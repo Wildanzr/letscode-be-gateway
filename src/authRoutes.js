@@ -1,6 +1,8 @@
-const AUTH = process.env.AUTH_URL
+const { logger } = require('./logger')
 
-console.log('AUTH_URL: ', AUTH)
+const AUTH = process.env.AUTH_URL || 'http://localhost:5001'
+
+logger.info(`AUTH_URL: ${AUTH}`)
 
 const authOptions = {
   target: AUTH, // target host
