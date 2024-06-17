@@ -30,6 +30,7 @@ app.use('/api/v1/user', createProxyMiddleware(authOptions))
 app.use('/api/v1/problems', createProxyMiddleware(problemOptions))
 app.use('/api/v1/competes', createProxyMiddleware(problemOptions))
 app.use('/api/v1/compete-problems', createProxyMiddleware(problemOptions))
+app.use('/api/v1/materials', createProxyMiddleware(problemOptions))
 app.use('/socket', createProxyMiddleware(socketOptions))
 app.use('/', createProxyMiddleware(collabOptions))
 
